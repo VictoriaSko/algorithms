@@ -1,19 +1,19 @@
 const selectionSort = (array) => {
     const resultArray = [...array];
-    for (let i = 0; i < array.length; i++) {
-        const curr = array[i];
+    for (let i = 0; i < resultArray.length; i++) {
+        const curr = resultArray[i];
         let localMin = {
-            value: array[i],
+            value: resultArray[i],
             index: i,
         };
-        for (let j = i + 1; j < array.length; j++) {
-            if (array[j] < localMin.value) {
-                localMin.value = array[j];
+        for (let j = i + 1; j < resultArray.length; j++) {
+            if (resultArray[j] < localMin.value) {
+                localMin.value = resultArray[j];
                 localMin.index = j;
             }
         }
-        array[i] = localMin.value;
-        array[localMin.index] = curr;
+        resultArray[i] = localMin.value;
+        resultArray[localMin.index] = curr;
     } 
     return resultArray;
 }
