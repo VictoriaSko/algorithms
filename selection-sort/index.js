@@ -1,4 +1,5 @@
 const selectionSort = (array) => {
+    const resultArray = [...array];
     for (let i = 0; i < array.length; i++) {
         const curr = array[i];
         let localMin = {
@@ -14,4 +15,5 @@ const selectionSort = (array) => {
         array[i] = localMin.value;
         array[localMin.index] = curr;
     } 
-} 
+    return resultArray;
+}
